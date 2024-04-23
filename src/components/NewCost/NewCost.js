@@ -14,7 +14,15 @@ const NewCost = (props) => {
         }
         props.onAddCost(coatData)
         setIsFormVisible(false)
+        
+        localStorage.setItem(coatData.id, JSON.stringify(coatData))
+
+        // JSON.parse(localStorage.getItem(coatData.id))
+        // if (localStorage.getItem(coatData.id)) {
+        //      JSON.parse(localStorage.getItem(coatData.id))
+        // }
     }
+
 
     const inputCostDataHandler = () => {
         setIsFormVisible(true)

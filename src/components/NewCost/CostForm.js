@@ -22,12 +22,14 @@ const CostForm = (props) => {
 
     const submitHandler =(event) => {
         event.preventDefault()
+        
 
         const costDate = {
             description: inpetName,
             amount: inpetAmount,
             date: new Date(inpetDate)
         }
+
 
         props.onSaveCostDate(costDate);
         setInpetName('');
